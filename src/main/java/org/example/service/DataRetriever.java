@@ -41,7 +41,7 @@ public class DataRetriever {
 
     public List<Category> getAllCategories() {
         List<Category> categories = new ArrayList<>();
-        String sql = "SELECT id, name, product_id FROM product_category";
+        String sql = "SELECT id, name FROM product_category";
 
         try {
             PreparedStatement stmt = dbConnection.getDBConnection().prepareStatement(sql);
