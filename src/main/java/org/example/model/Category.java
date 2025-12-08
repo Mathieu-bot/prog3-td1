@@ -1,8 +1,8 @@
 package org.example.model;
 
 public class Category {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
 
     public Category(int id, String name) {
         this.id = id;
@@ -11,4 +11,14 @@ public class Category {
 
     public int getId() {return id;}
     public String getName() {return name;}
+
+    @Override
+    public String toString() {
+        return "{\n"
+                + "\"id\": " + id + ", \n"
+                + "\"name\": \"" + name + "\"\n"
+                + "}";
+    }
+
+
 }
