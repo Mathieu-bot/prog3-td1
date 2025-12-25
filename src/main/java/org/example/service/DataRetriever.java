@@ -55,7 +55,7 @@ public class DataRetriever {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         return categories;
@@ -79,7 +79,7 @@ public class DataRetriever {
             mapResultSetToProducts(products, stmt);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return products;
     }
@@ -122,7 +122,7 @@ public class DataRetriever {
 
             mapResultSetToProducts(products, stmt);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         return products;
